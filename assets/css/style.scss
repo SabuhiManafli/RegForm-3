@@ -1,0 +1,208 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+// ! INPUTS DESIGN ! //
+@mixin inputs-style {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(227, 227, 227);
+    outline: none;
+}
+
+// ! INPUTS LOCATION ! //
+@mixin row-props{
+    margin-bottom: 45px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+
+span {
+    font-weight: 600;
+    font-size: 16px;
+}
+label {
+    color: gray;
+    margin-top: 10px;
+}
+
+// ! BACKGROUND ! //
+.box {
+    height: 100vh;
+    background: linear-gradient(to top right, #08aeea 0%, #b721ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+// ! CARD ! //
+    .container {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        width: 800px;
+        height: 840px;
+        border-radius: 10px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+
+// ! FORM HEAD ! //
+        .head{
+            background-color: rgb(28, 28, 28);
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px 10px 0px 0px;
+    
+            h1{
+                font-size: 24px;
+            color: #fff;
+            text-transform: uppercase;
+            }
+        }
+// ! FORM ! //
+        .body {
+            padding: 50px 80px;
+            .form {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+// ! NAME ROW ! //
+                .name {
+                    @include row-props;
+                    .full-name{
+                        display: flex;
+                        .first-name{
+                            input {
+                                width: 235px;
+                                height: 50px;
+                                @include inputs-style;
+                            }
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .last-name {
+                            margin-left: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            input {
+                                width: 235px;
+                                height: 50px;
+                                @include inputs-style;
+                            }
+                        }
+                    }
+                }
+// ! COMPANY ROW ! //
+                .company {
+                    @include row-props;
+                    input {
+                        width: 500px;
+                        height: 50px;
+                        @include inputs-style;
+                    }
+                }
+// ! EMAIL ROW ! //
+                .email {
+                    @include row-props;
+                    input {
+                        width: 500px;
+                        height: 50px;
+                        @include inputs-style;
+                    }
+                }
+// ! PHONE ROW ! //
+                .phone {
+                    @include row-props;
+                    .full-number {
+                        display: flex;
+                        .area-code {
+                            display: flex;
+                            flex-direction: column;
+                            input {
+                                width: 100px;
+                                height: 50px;
+                                @include inputs-style;
+                            }
+                        }
+                        .phone-number {
+                            margin-left: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            input {
+                                width: 370px;
+                                height: 50px;
+                                @include inputs-style;
+                            }
+                        }
+                    }
+                }
+// ! SELECT/OPTION ! //
+                .select-option {
+                    @include row-props;
+                    select {
+                        
+                        cursor: pointer;
+                        width: 500px;
+                        height: 50px;
+                        background-color: rgb(227, 227, 227);
+                        border-radius: 5px;
+                        border: none;
+                        font-size: 18px;
+                        padding: 0px 20px;
+                    }
+                }
+// ! YES/NO ! //
+                .radio {
+                    .radio-inputs {
+                        display: flex;
+                        align-items: baseline;
+                        margin-top: 10px;
+                        
+                    input {
+                        cursor: pointer;
+                        margin-right: 10px;
+                    }
+                    
+                    label {
+                        cursor: pointer;
+                        font-size: 18px;
+                        margin-right: 30px;
+                    }
+                }
+            }
+// ! BUTTON ! //
+            button {
+                margin-top: 30px;
+                width: 170px;
+                height: 50px;
+                background-color: #fa3444;
+                color: #fff;
+                cursor: pointer;
+                transition: 0.3s;
+                text-transform: uppercase;
+                font-size: 17px;
+                font-weight: 600;
+                border: none;
+                border-radius: 5px;
+                &:hover {
+                    background-color: #d12a38;
+                }
+            }
+        }
+    }
+    }
+}
+
